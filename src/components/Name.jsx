@@ -2,25 +2,24 @@ import Lottie from 'lottie-react'
 import SpyAnimation from '../assets/Lotties/spy.json'
 import { CgArrowRight } from 'react-icons/cg';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 export default function Name() {
-
     const [name, setName] = useState('');
+    const Navigate = useNavigate();
 
     const handleInput = () => {
         console.log(name);
         if (name.toLowerCase() === 'iqra') {
-            createAlert();
+            Navigate('/welcome')
+        } else {
+            alert('Wrong Person')
         }
         setName('');
     }
 
     const onInputChange = (e) => {
         setName(e.target.value);
-    }
-
-    const createAlert = () => {
-        alert(`Welcome ${name} 🎀`);
     }
 
     return (
