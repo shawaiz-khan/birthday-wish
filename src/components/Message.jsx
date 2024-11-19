@@ -11,16 +11,18 @@ export default function Message() {
     }
 
     return (
-        <main className='bg-secondary-light h-screen flex justify-center items-center px-4'>
-            <div className='flex justify-center items-center w-full sm:w-1/2 -ml-24'>
-                <Lottie animationData={HeartAnimation} loop={true} className='w-96 md:w-[400px] sm:w-[300px]' />
+        <main className='bg-secondary-light min-h-screen flex flex-col md:flex-row justify-center items-center px-4 gap-6 md:gap-0 py-5'>
+            {/* Animation Section */}
+            <div className='flex justify-center items-center w-full sm:w-1/2'>
+                <Lottie animationData={HeartAnimation} loop={true} className='w-80 sm:w-[300px] md:w-[400px]' />
             </div>
 
-            <div className='flex flex-col justify-center items-start sm:w-full md:w-1/2 px-4'>
-                <h1 className='text-4xl font-extrabold text-left sm:text-2xl md:text-3xl text-primary'>
+            {/* Text Section */}
+            <div className='flex flex-col justify-center items-start w-full sm:w-1/2 px-4'>
+                <h1 className='text-3xl sm:text-2xl md:text-4xl font-extrabold text-left text-primary'>
                     A Small Message for You!
                 </h1>
-                <p className='text-lg text-left text-neutral-700 sm:text-base md:text-xl mt-5 leading-relaxed'>
+                <p className='text-base sm:text-sm md:text-lg text-left text-neutral-700 mt-5 leading-relaxed'>
                     Happy Birthday to my incredible best friend and crime partner! Today, we celebrate you and all the joy you bring into my life. You are my secret keeper, my confidant, and the one who makes every day feel like an adventure. I cherish our moments together—the laughter, the late-night talks, and all the little things that make our bond so special.
 
                     <br /><br />
@@ -33,7 +35,7 @@ export default function Message() {
                 </p>
                 <button
                     onClick={handleClick}
-                    className='bg-primary w-fit h-fit py-4 px-10 text-white text-lg font-semibold rounded-md hover:bg-primary-light transition-all duration-300 ease-in focus:ring-2 focus:ring-primary-light flex justify-center items-center sm:w-[80%] md:w-[auto] mt-5'>
+                    className='bg-primary w-full sm:w-fit py-4 px-6 md:px-10 text-white text-sm md:text-lg font-semibold rounded-md hover:bg-primary-light transition-all duration-300 ease-in focus:ring-2 focus:ring-primary-light flex justify-center items-center mt-5'>
                     Let's have some Fireworks 🎇
                 </button>
             </div>

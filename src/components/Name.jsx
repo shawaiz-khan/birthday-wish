@@ -23,13 +23,13 @@ export default function Name() {
     }
 
     return (
-        <main className='bg-secondary-light h-screen flex flex-col justify-center items-center'>
-            <Lottie animationData={SpyAnimation} loop={true} className='w-96 md:w-[350px] sm:w-[250px]' />
-            <div className='flex gap-3 justify-center sm:flex-col sm:gap-4 md:flex-row items-end'>
+        <main className='bg-secondary-light h-screen w-screen flex flex-col justify-center items-center px-4'>
+            <Lottie animationData={SpyAnimation} loop={true} className='w-72 md:w-[350px]' />
+            <div className='flex gap-3 justify-center flex-col w-full max-w-lg sm:gap-4 md:flex-row md:items-end items-center'>
                 <input
                     type="text"
                     placeholder='Type your name'
-                    className='bg-transparent border-b-2 border-primary w-96 text-2xl py-4 px-2 outline-none text-primary placeholder:text-neutral-600 focus:border-primary-light transition-all duration-300 sm:w-[80%] md:w-[70%]'
+                    className='bg-transparent border-b-2 border-primary w-full text-lg sm:text-2xl py-3 px-2 outline-none text-primary placeholder:text-neutral-600 focus:border-primary-light transition-all duration-300 md:w-[70%]'
                     name='name'
                     value={name}
                     onChange={onInputChange}
@@ -37,7 +37,7 @@ export default function Name() {
                 />
                 <button
                     onClick={handleInput}
-                    className='bg-primary w-fit h-fit py-4 px-10 text-white rounded-md hover:bg-primary-light transition-all duration-300 ease-in focus:ring-2 focus:ring-primary-light flex justify-center items-center sm:w-[80%] md:w-[auto]'
+                    className='bg-primary w-full sm:w-[80%] md:w-auto h-fit py-3 px-6 sm:py-4 sm:px-10 text-white rounded-md hover:bg-primary-light transition-all duration-300 ease-in focus:ring-2 focus:ring-primary-light flex justify-center items-center'
                 >
                     <CgArrowRight />
                 </button>
