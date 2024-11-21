@@ -10,7 +10,7 @@ export default function Name() {
 
     const handleInput = () => {
         console.log(name);
-        if (name.toLowerCase() === 'iqra') {
+        if (name.toLowerCase().trim() === 'admin') {
             Navigate('/welcome')
         } else {
             alert('Wrong Person')
